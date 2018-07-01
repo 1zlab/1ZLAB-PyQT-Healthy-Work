@@ -1,0 +1,13 @@
+{
+  "label_stylesheet":
+    "color: rgb(255, 0, 127);font: 30pt \"WenQuanYi Micro Hei Mono\";",
+  "button_stylesheet":
+    "background-color: rgba(182, 176, 171, 90);color: rgb(255, 0, 127);font: 30pt \"WenQuanYi Micro Hei Mono\";",
+  "message": "\u559d\u676f\u6c34\u4f11\u606f\u4e00\u4e0b\u5427",
+  "count": "        ",
+  "time_work": "3000",
+  "time_rest": "3000",
+  "wallpapers_dir": "./wallpapers",
+  "music_dir": "./music",
+  "with_music": "1"
+}
