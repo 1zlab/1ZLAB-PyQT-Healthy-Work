@@ -16,8 +16,8 @@ DEFALUT_CONFIG = {
     'button_stylesheet': "background-color: rgba(182, 176, 171, 90);color: rgb(255, 0, 127);font: 30pt \"WenQuanYi Micro Hei Mono\";",
     'message': "喝杯水休息一下吧",
     'count': "        ",
-    'time_work': "3000",
-    'time_rest': "3000",
+    'time_work': "1800000",
+    'time_rest': "300000",
     'wallpapers_dir': "./wallpapers",
     'music_dir': "./music",
     'with_music': "1"
@@ -37,14 +37,15 @@ class Config():
         self.WITH_MUSIC = int(self.read_config()['with_music'])
 
     def read_config(self):
-        config = json.dumps(DEFALUT_CONFIG)
 
         if os.path.exists(CONFIG_FILE):
             with open(CONFIG_FILE, 'r') as file:
-                    config = file.read()
+                config = file.read()
         else:
             with open(CONFIG_FILE, 'w') as file:
-                    file.write(config)
+                config = json.dumps(DEFALUT_CONFIG)
+                file.write(config)
+                
         return json.loads(config)
 
 

@@ -3,7 +3,7 @@
 
 
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton
-from PyQt5.QtGui import QPainter, QPixmap, QGuiApplication
+from PyQt5.QtGui import QPainter, QPixmap, QGuiApplication, QIcon
 from PyQt5.QtCore import Qt, QTimer, QUrl, QDir, QCoreApplication
 from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent, QMediaPlaylist
 from config import CONFIG
@@ -22,6 +22,7 @@ class HealthyWork(QWidget):
     def init_ui(self):
         # TODO
         # set a window icon
+        self.setWindowIcon(QIcon('./icon.png'))
         self.label_background = QLabel(self)
         self.button = QPushButton(self)
         self.button.setText('BACK TO WORK')
