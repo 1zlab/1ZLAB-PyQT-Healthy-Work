@@ -15,7 +15,7 @@
 - 你值得拥有
 
 ![截图](https://github.com/1zlab/HealthyWork/blob/master/Screenshot.png)
-![截图](https://github.com/1zlab/HealthyWork/blob/master/Screenshot.png_2.png)
+![截图](https://github.com/1zlab/HealthyWork/blob/master/Screenshot_2.png)
 ## Dependence
 - python3.6
 - PyQt5
