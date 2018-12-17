@@ -17,18 +17,23 @@
 ![截图](https://github.com/1zlab/HealthyWork/blob/master/Screenshot.png)
 ![截图](https://github.com/1zlab/HealthyWork/blob/master/Screenshot_2.png)
 ## Dependence
-- python3.6
+- python3
 - PyQt5
 
+
+## Install
+```sh
+pip install healthywork
+```
+
 ## How to work
-```python
-python healthywork.py 
+```sh
+healthywork
 ```
 ## Custom
 
-初次运行会在用户目录下的.config文件夹中创建healthywork/config.json文件，写入的都是config.py中DEFAUT_CONFIG 变量内所定义的json字符串。
+初次运行会在用户目录下的.config文件夹中创建healthywork.json文件，存储程序基本的配置，你可以自行修改一下的所有选项：
 
-如下：
 
 ```pytho
 DEFALUT_CONFIG = {
