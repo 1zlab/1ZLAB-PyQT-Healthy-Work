@@ -7,7 +7,7 @@
   "count": "        ",
   "time_work": "1800000",
   "time_rest": "300000",
-  "wallpapers_dir": "./wallpapers",
-  "music_dir": "./music",
+  "wallpapers_dir": "~/wallpapers",
+  "music_dir": "~/music",
   "with_music": "1"
 }

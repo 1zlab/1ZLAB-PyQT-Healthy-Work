@@ -1,0 +1,10 @@
+*.log
+*.pot
+*.pyc
+__pycache__/
+.vscode/
+.directory
+venv/
+dist/
+*.egg-info
+
