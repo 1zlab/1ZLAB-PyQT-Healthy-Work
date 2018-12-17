@@ -100,12 +100,13 @@ class HealthyWork(QWidget):
         if is_music_on and os.listdir(CONFIG.DIR_MUSIC):
             songs = [CONFIG.DIR_MUSIC + "/" +
                      song for song in os.listdir(CONFIG.DIR_MUSIC) if os.path.isfile(CONFIG.DIR_MUSIC + "/" + song)]
-            index = random.randint(0, len(songs) - 1)
-            try:
-                self.player.setMedia(media(songs[index]))
-            except:
-                pass
-            self.player.play()
+            if songs:
+                index = random.randint(0, len(songs) - 1)
+                try:
+                    self.player.setMedia(media(songs[index]))
+                except:
+                    pass
+                self.player.play()
 
     def position(self, widget):
         # 计算label显示位置
@@ -130,12 +131,17 @@ class HealthyWork(QWidget):
             self.label_background.setGeometry(
                 0, 0, window_size.width(), window_size.height())
             wallpapers = [CONFIG.DIR_WALLPAPERS + "/" +
-                          wallpaper for wallpaper in os.listdir(CONFIG.DIR_WALLPAPERS)]
+                          wallpaper for wallpaper in os.listdir(CONFIG.DIR_WALLPAPERS) if os.path.isfile(CONFIG.DIR_WALLPAPERS + "/" + wallpaper)]
             # print(wallpapers)
-            index = random.randint(0, len(wallpapers) - 1)
-            self.label_background.setPixmap(QPixmap(QDir.absolutePath(QDir(wallpapers[index])))
+            if wallpapers:
+                try:
+                    index = random.randint(0, len(wallpapers) - 1)
+                    self.label_background.setPixmap(QPixmap(QDir.absolutePath(QDir(wallpapers[index])))
                                             .scaled(window_size.width(), window_size.height()))
-        self.label_message.show()
+                    self.label_message.show()
+                except:
+                    pass
+            
         self.label_count.show()
 
 def cli():
