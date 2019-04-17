@@ -17,18 +17,23 @@
 ![截图](https://github.com/1zlab/HealthyWork/blob/master/Screenshot.png)
 ![截图](https://github.com/1zlab/HealthyWork/blob/master/Screenshot_2.png)
 ## Dependence
-- python3.6
+- python3
 - PyQt5
 
-## How to work
-```python
-python healthywork.py 
+
+## Install
+```sh
+pip install healthywork
+```
+
+## How to use
+```sh
+healthywork
 ```
 ## Custom
 
-初次运行会在用户目录下的.config文件夹中创建healthywork/config.json文件，写入的都是config.py中DEFAUT_CONFIG 变量内所定义的json字符串。
+初次运行会在用户目录下的.config文件夹中创建healthywork.json文件，存储程序基本的配置，你可以自行修改一下的所有选项：
 
-如下：
 
 ```pytho
 DEFALUT_CONFIG = {
@@ -36,8 +41,8 @@ DEFALUT_CONFIG = {
     'button_stylesheet': "background-color: rgba(182, 176, 171, 90);color: rgb(255, 0, 127);font: 30pt \"WenQuanYi Micro Hei Mono\";",
     'message': "喝杯水休息一下吧",
     'count': "        ",
-    'time_work': "1800000",
-    'time_rest': "300000",
+    'time_work': "2400000",
+    'time_rest': "600000",
     'wallpapers_dir': "./wallpapers",
     'music_dir': "./music",
     'with_music': "1"
@@ -48,8 +53,8 @@ DEFALUT_CONFIG = {
 - button_stylesheet：界面上按钮的样式
 - message：提醒的文字
 - count：给倒计时标签占位用的，方便计算label的位置
-- time_work: 工作时间间隔，单位毫秒，默认半小时
-- time_rest: 休息时间间隔，单位毫秒，默认五分钟
-- wallpapers_dir: 存放壁纸的目录，默认为当前的wallpapers目录
-- music_dir: 存放音频的目录，默认为当前的music目录
+- time_work: 工作时间间隔，单位毫秒，默认40分钟
+- time_rest: 休息时间间隔，单位毫秒，默认10分钟
+- wallpapers_dir: 存放壁纸的目录，默认为用户主目录下的Pictures
+- music_dir: 存放音频的目录，默认为用户主目录下的Music目录
 - with_music: 休息时是否播放音乐，1为播放，0为不播放。默认播放。
